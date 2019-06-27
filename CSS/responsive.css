@@ -1,0 +1,549 @@
+/*==================================
+            Mobile Menu 
+==================================*/
+
+.navbar-header {
+    position: relative;
+}
+
+#mobile-nav-open-btn {
+    font-size: 30px;
+    color: #f4c613;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    top: 6px;
+
+    /*hide mobile nav open button*/
+    display: none;
+}
+
+#mobile-nav {
+    /* by default mobile menu will be hidden with height 0% */
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 300ms linear;
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    overflow: hidden;
+}
+
+#mobile-nav-close-btn {
+    font-family: 'Raleway', sans-sarif;
+    font-size: 70px;
+    color: #212226;
+    font-weight: 400;
+    cursor: pointer;
+    position: absolute;
+    top: -9px;
+    right: 13px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+#mobile-nav-content {
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+    top: 10%;
+}
+
+#mobile-nav ul li {
+    margin-bottom: 20px;
+}
+
+#mobile-nav a {
+    font-family: 'Raleway', sans-sarif;
+    font-size: 18px;
+    color: #212226;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+#mobile-nav a:hover,
+#mobile-nav a:focus,
+#mobile-nav-close-btn:hover,
+#mobile-nav-close-btn:focus {
+    color: #fac613;
+    background: none;
+}
+
+/* Mobile nav scroll spy active state */
+
+.white-nav-top #mobile-nav ul.nav>li.active>a {
+    color: #fac613;
+    font-weight: 500;
+}
+
+/*==================================
+    Bootstrap 3 media Queries
+==================================*/
+
+/* Large devices (desktop & Laptops) */
+
+@media (min-width: 1200px) and (max-width: 1299px) {
+
+    /* Navigation */
+    .site-nav-wrapper {
+        padding: 0 20px;
+    }
+}
+
+/* Medium devices (Landscape tablets & medium Laptops) */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    /* Navigation */
+    .site-nav-wrapper {
+        padding: 0;
+    }
+
+    /* Generic */
+    .verticle-heading h2 {
+        font-size: 29px;
+    }
+
+    /* Services 2 */
+    #services-tabs .tab-bg {
+        padding: 16px 30px;
+        min-height: 399px;
+    }
+
+    .service-tab p {
+        line-height: 20px;
+    }
+}
+
+/* Small devices (Potrait tablets & small Laptops) */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* Navigation */
+    .site-nav-wrapper {
+        padding: 0;
+    }
+
+    /* home */
+    #home-heading h1 {
+        font-size: 41px;
+    }
+
+    #home-text p {
+        font-size: 13px;
+    }
+
+    /* Generic */
+    .btn-general {
+        padding: 8px 35px 8px 35px;
+        font-size: 10px;
+    }
+
+    /* Generic */
+    .verticle-heading h2 {
+        font-size: 29px;
+    }
+
+    /* Tech Statement */
+    #tech-statement h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    /* services 2 */
+    .r-tabs-accordion-title {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .r-tabs-accordion-title a {
+        font-family: "Raleway", sans-serif;
+        font-size: 13px;
+        color: #212226;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding: 0;
+        text-decoration: none;
+    }
+
+    /* Tab active stat */
+    .r-tabs-accordion-title.r-tabs-state-active a {
+        color: #fac613;
+        font-weight: 700;
+        border-bottom: 3px solid #fac613;
+        padding-bottom: 5px;
+        transition: border-color 300ms linear;
+        -webkit-transition: border-color 300ms linear;
+        -moz-transition: border-color 300ms linear;
+        -ms-transition: border-color 300ms linear;
+        -o-transition: border-color 300ms linear;
+    }
+
+    /* pricing */
+    .pricing-tabel .price h2 {
+        margin: 0 0 0 6px;
+        font-size: 35px;
+    }
+
+    /* stat */
+    .stats-item p {
+        line-height: 18px;
+    }
+
+    /* blog */
+    .blog-post .post-meta p {
+        line-height: 14px;
+    }
+
+    /* contact */
+
+    ul.office-detalis li {
+        margin-right: 15px;
+        ;
+    }
+
+    ul.office-detalis li i {
+        width: 25px;
+    }
+}
+
+/* Extra small devices (Landscape phones & Potrait Tablets) */
+
+@media (max-width: 767px) {
+
+    /* navigation */
+    .navbar {
+        padding: 20px 0;
+    }
+
+    .site-nav-wrapper,
+    .white-nav-wrapper {
+        padding: 0;
+    }
+
+    /* show mobile menu open button */
+    #mobile-nav-open-btn {
+        display: block;
+    }
+
+    /* home */
+    #home-heading h1 {
+        font-size: 22px;
+    }
+
+    #home-text p {
+        font-size: 13px;
+        line-height: 18px;
+        margin: 8px 2px 30px 2px;
+    }
+
+    /* Generic */
+    .btn-general {
+        padding: 8px 25px 6px 25px;
+        font-size: 10px;
+    }
+
+    /* about 1 */
+    /* large content box */
+    .content-box-lg {
+        padding: 90px 0px;
+    }
+
+    /* vertical heading */
+    .verticle-heading {
+        text-align: center;
+    }
+
+    .verticle-heading h5 {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        position: static;
+        margin-bottom: 15px;
+    }
+
+    .verticle-heading h2 {
+        font-size: 29px;
+        line-height: normal;
+        margin: 0;
+    }
+
+    #about-left {
+        margin-bottom: 50px;
+    }
+
+    #about-right {
+        text-align: center;
+    }
+
+    /* about 2 */
+    /* medium content box */
+    .content-box-md {
+        padding: 80px 0;
+    }
+
+    .about-item {
+        padding: 55px 40px;
+        margin-bottom: 35px;
+    }
+
+    .about-item i {
+        font-size: 30px;
+    }
+
+    .about-item h3 {
+        font-size: 18px;
+    }
+
+    /* team */
+    #team-left .verticle-heading {
+        min-height: 130px;
+    }
+
+    .skill h4 {
+        font-size: 14px;
+        line-height: 35px;
+    }
+
+    /* Tech Statement */
+    #tech-statement h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    /* service 1 */
+    /* horizontal heading */
+    .horizontal-heading {
+        margin-bottom: 40px;
+    }
+
+    .horizontal-heading h2 {
+        font-size: 30px;
+    }
+
+    #service-1 img {
+        margin: 35px 0;
+    }
+
+    .service,
+    .service .icon {
+        text-align: center;
+    }
+
+    .service h4 {
+        font-size: 18px;
+    }
+
+    /* services 2 */
+    .r-tabs-accordion-title {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .r-tabs-accordion-title a {
+        font-family: "Raleway", sans-serif;
+        font-size: 13px;
+        color: #212226;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding: 0;
+        text-decoration: none;
+    }
+
+    /* Tab active stat */
+    .r-tabs-accordion-title.r-tabs-state-active a {
+        color: #fac613;
+        font-weight: 700;
+        border-bottom: 3px solid #fac613;
+        padding-bottom: 5px;
+        transition: border-color 300ms linear;
+        -webkit-transition: border-color 300ms linear;
+        -moz-transition: border-color 300ms linear;
+        -ms-transition: border-color 300ms linear;
+        -o-transition: border-color 300ms linear;
+    }
+
+    #services-tabs .tab-bg {
+        text-align: center;
+        padding: 40px 30px;
+    }
+
+    #services-tabs h2 {
+        font-size: 40px;
+    }
+
+    #services-tabs h3 {
+        font-size: 28px;
+    }
+
+    /* portfolio */
+    #portfolio {
+        padding-bottom: 0;
+    }
+
+    #isotope-filters button {
+        padding-right: 15px;
+    }
+
+    /* testimonials */
+    #testimonials {
+        padding-top: 45px;
+    }
+
+    #testimonial-slider {
+        top: 0;
+    }
+
+    .testimonials .verticle-heading {
+        padding-bottom: 0;
+    }
+
+    .testimonial .row {
+        margin: 0;
+    }
+
+    .testimonial h3 {
+        font-size: 20px;
+    }
+
+    .testimonial .stars {
+        font-size: 16px;
+    }
+
+    .author img {
+        width: 80px !important;
+    }
+
+    /* pricing */
+    .pricing-table {
+        margin-bottom: 30px;
+    }
+
+    .pricing-table .price h2 {
+        font-size: 28px;
+        margin: 0 0 0 16px;
+    }
+
+    /* stats */
+    .stats-item {
+        margin-bottom: 20px;
+        padding: 25px 5px;
+    }
+
+    .stats-item i {
+        font-size: 30px;
+    }
+
+    .stats-item h3 {
+        font-size: 24px;
+    }
+
+    /* blog */
+    #blog-left {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .blog-post {
+        margin-bottom: 25px;
+    }
+
+    /* contact */
+    #contact-left {
+        text-align: center;
+    }
+
+    .office {
+        margin-bottom: 40px;
+    }
+
+    ul.office-details li {
+        display: block;
+        margin-top: 25px;
+    }
+
+    ul.office-details li i {
+        width: auto;
+        display: block;
+        margin-bottom: 3px;
+    }
+
+    ul.social-list {
+        margin-bottom: 40px;
+    }
+
+}
+
+/* Extra small devices (potrait phones & smaller devices) */
+
+@media (max-width: 480px) {
+
+    /* home */
+    #home-heading h1 {
+        font-size: 18px;
+    }
+
+    #home-text p {
+        font-size: 11px;
+        line-height: 16px;
+        margin: 8px 10px 25px 10px;
+    }
+
+    .verticle-heading h2 {
+        font-size: 22px;
+    }
+
+    /* portfolio */
+    #isotope-filters {
+        text-align: center;
+    }
+
+    #isotope-filters button {
+        font-size: 10px;
+        padding-right: 14px;
+    }
+
+    /* testimonials */
+    .testimonial h3 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .testimonial .stars {
+        font-size: 13px;
+    }
+}
+
+/* Extra small devices (potrait phones & smaller devices) */
+
+@media (max-width: 320px) {
+
+    /* testimonials */
+    .testimonial h3 {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .testimonial .stars {
+        font-size: 10px;
+    }
+}
